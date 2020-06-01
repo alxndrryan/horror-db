@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light custom-nav">
       <a className="navbar-brand custom-brand" href="#">
-        Navbar
+        Horror DB
       </a>
       <button
         className="navbar-toggler"
