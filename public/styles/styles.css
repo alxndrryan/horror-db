@@ -22,6 +22,14 @@ body {
   text-align: center;
 }
 
+.google-card {
+  margin: 3% 0%;
+}
+
+.btn-google {
+  background-color: #af0404;
+}
+
 /* Footer */
 
 footer {

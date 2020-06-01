@@ -33,7 +33,7 @@ function Login() {
           Sign in
         </button>
       </form>
-      <div className="card social-block">
+      <div className="card social-block google-card">
         <div className="card-body">
           <a
             className="btn btn-block btn-social btn-google"
