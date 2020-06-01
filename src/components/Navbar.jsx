@@ -27,17 +27,12 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
-              Link
+              Profile
             </a>
           </li>
           <li className="nav-item">
-            <a
-              className="nav-link disabled"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
-            >
-              Disabled
+            <a className="nav-link " href="#" tabindex="-1">
+              Logout
             </a>
           </li>
         </ul>
@@ -45,7 +40,7 @@ function Navbar() {
           <input
             className="form-control mr-sm-2"
             type="search"
-            placeholder="Search"
+            placeholder="Search by title..."
           />
           <button
             className="btn btn-outline-success my-2 my-sm-0"
