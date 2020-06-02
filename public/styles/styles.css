@@ -22,12 +22,35 @@ body {
   text-align: center;
 }
 
-.google-card {
-  margin: 3% 0%;
+.fa-ghost {
+  padding: 3%;
 }
 
-.btn-google {
+.custom-btn {
   background-color: #af0404;
+  border-color: black;
+  color: black;
+}
+
+a.custom-btn {
+  margin-top: 2%;
+  text-align: center;
+}
+
+a.custom-btn:hover {
+  background-color: #ff0000;
+}
+
+button.custom-btn:hover {
+  background-color: #ff0000;
+  color: black;
+  border-color: black;
+}
+
+/* Input Component */
+
+.custom-input {
+  margin: 2% 0;
 }
 
 /* Footer */
