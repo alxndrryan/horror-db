@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from "./Navbar";
-import Footer from "./Footer";
-import Login from "./Login";
-import Movie from "./Movie";
-import NoMatch from "./NoMatch";
+import Header from "./components/Navbar";
+import Footer from "./components/Footer";
+import Login from "./pages/Login";
+import Movie from "./pages/Movie";
+import NoMatch from "./pages/NoMatch";
 
 function App() {
   return (

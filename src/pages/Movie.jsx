@@ -1,5 +1,5 @@
 import React from "react";
-import MovieCall from "./MovieCall";
+import MovieCall from "../components/MovieCall";
 
 function Movie() {
   return (
