@@ -4,6 +4,7 @@ import Header from "./Navbar";
 import Footer from "./Footer";
 import Login from "./Login";
 import Movie from "./Movie";
+import NoMatch from "./NoMatch";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
           </Route>
           <Route exact path="/login">
             <Login />
+          </Route>
+          <Route>
+            <NoMatch />
           </Route>
         </Switch>
         <Footer />
