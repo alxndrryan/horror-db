@@ -15,24 +15,6 @@ function MovieCall() {
           required={""}
           autoComplete={"off"}
         />
-        <Input
-          name={"Director"}
-          for={"inputDirector"}
-          type={"text"}
-          id={"inputPassword"}
-          placeholder={"Director"}
-          required={""}
-          autoComplete={"off"}
-        />
-        <Input
-          name={"Year"}
-          for={"inputYear"}
-          type={"text"}
-          id={"inputYear"}
-          placeholder={"Year"}
-          required={""}
-          autoComplete={"off"}
-        />
         <button
           className="btn btn-lg btn-primary btn-block custom-btn"
           type="submit"
