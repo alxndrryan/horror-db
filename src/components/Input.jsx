@@ -7,12 +7,14 @@ function Input(props) {
         {props.name}
       </label>
       <input
+        name={props.name}
         className="form-control custom-input"
         type={props.type}
         id={props.id}
         placeholder={props.placeholder}
         required={props.required}
         autoComplete={props.autoComplete}
+        onChange={props.onChange}
       />
     </div>
   );
