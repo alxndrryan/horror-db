@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
+require("dotenv").config();
 
 function APITest() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
+
+  const hi = process.env.REACT_APP_API_KEY;
+  console.log(hi);
 
   // Note: the empty deps array [] means
   // this useEffect will run once
