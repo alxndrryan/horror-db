@@ -1,5 +1,6 @@
 import React from "react";
 import MovieCall from "../components/MovieCall";
+import APITest from "../components/APITest";
 
 function Movie() {
   return (
@@ -20,6 +21,7 @@ function Movie() {
         </a>
       </div>
       <MovieCall />
+      <APITest />
       <div className="jumbotron">
         <h1 className="display-4">Hello, world!</h1>
         <p className="lead">
