@@ -6,14 +6,15 @@ function APITest() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
 
-  const hi = process.env.REACT_APP_API_KEY;
-  console.log(hi);
+  const APIKey = process.env.REACT_APP_API_KEY;
 
   // Note: the empty deps array [] means
   // this useEffect will run once
   // similar to componentDidMount()
   useEffect(() => {
-    fetch("http://www.omdbapi.com/?t=friday+the+13th&apikey=37d70c58")
+    fetch(
+      "http://www.omdbapi.com/?t=friday+the+13th&plot=full&apikey=" + APIKey
+    )
       .then((res) => res.json())
       .then(
         (result) => {
@@ -29,7 +30,7 @@ function APITest() {
           setError(error);
         }
       );
-  }, []);
+  }, [APIKey]);
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -37,11 +38,21 @@ function APITest() {
     return <div>Loading...</div>;
   } else {
     return (
-      <ul style={{ color: "red" }}>
-        <li>h1</li>
-        <li>{items.Title}</li>
-        <li>{items.Year}</li>
-      </ul>
+      <div className="jumbotron">
+        <h1 className="display-4">
+          {items.Title} ({items.Year})
+        </h1>
+        <p>{items.Runtime}</p>
+        {/* <p>{items["Ratings"][2]["Value"]}</p> */}
+        <img src={items.Poster} alt="Movie Poster" />
+        <p className="lead">{items.Plot}</p>
+        <p>Stars: {items.Actors}</p>
+        <hr className="my-4" />
+        <p>{items.Year}</p>
+        <a className="btn btn-primary btn-lg" href="#" role="button">
+          Learn more
+        </a>
+      </div>
     );
   }
 }
