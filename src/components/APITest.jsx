@@ -21,6 +21,7 @@ function APITest() {
           setIsLoaded(true);
           setItems(result);
           console.log(result);
+          console.log(result.Ratings[0].Value);
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
@@ -42,13 +43,16 @@ function APITest() {
         <h1 className="display-4">
           {items.Title} ({items.Year})
         </h1>
-        <p>{items.Runtime}</p>
+        <p>
+          {items.Rated} | {items.Runtime}
+        </p>
         {/* <p>{items["Ratings"][2]["Value"]}</p> */}
         <img src={items.Poster} alt="Movie Poster" />
         <p className="lead">{items.Plot}</p>
+        <p>Director: {items.Director}</p>
+        <p>Writer: {items.Writer}</p>
         <p>Stars: {items.Actors}</p>
         <hr className="my-4" />
-        <p>{items.Year}</p>
         <a className="btn btn-primary btn-lg" href="#" role="button">
           Learn more
         </a>
