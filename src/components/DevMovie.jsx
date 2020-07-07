@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 require("dotenv").config();
 
-function APITest() {
+function DevMovie() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
@@ -13,7 +13,7 @@ function APITest() {
   // similar to componentDidMount()
   useEffect(() => {
     fetch(
-      "http://www.omdbapi.com/?t=friday+the+13th&plot=full&apikey=" + APIKey
+      "http://www.omdbapi.com/?t=paranormal+activity&plot=full&apikey=" + APIKey
     )
       .then((res) => res.json())
       .then(
@@ -39,9 +39,10 @@ function APITest() {
   } else {
     return (
       <div className="jumbotron">
-        <h1 className="display-4">
+        <h1 className="display-5">Film of the Week</h1>
+        <h2 className="display-4">
           {items.Title} ({items.Year})
-        </h1>
+        </h2>
         <p>
           {items.Rated} | {items.Runtime}
         </p>
@@ -60,4 +61,4 @@ function APITest() {
   }
 }
 
-export default APITest;
+export default DevMovie;
