@@ -52,10 +52,6 @@ function DevMovie() {
         <p>Director: {items.Director}</p>
         <p>Writer: {items.Writer}</p>
         <p>Stars: {items.Actors}</p>
-        <hr className="my-4" />
-        <a className="btn btn-primary btn-lg" href="#" role="button">
-          Learn more
-        </a>
       </div>
     );
   }
