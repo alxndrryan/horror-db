@@ -1,18 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Input from "./Input";
 
 function MovieCall() {
+  const APIKey = process.env.REACT_APP_API_KEY;
   const [title, setTitle] = useState("");
+  const [movie, setMovie] = useState(null);
 
   function handleChange(e) {
-    const { name, value } = e.target;
-    console.log(name, value);
+    setTitle(e.target.value);
+    // console.log(e.target.value);
   }
 
   function handleClick(e) {
-    console.log("clicked");
+    console.log("clicked", { title });
+    let obj = { title };
+    console.log(obj.title);
+    var replaced = obj.title.replace(/ /g, "+");
+    console.log(replaced);
     e.preventDefault();
+
+    fetchData(replaced);
   }
+
+  const fetchData = async (movieTitle) => {
+    const response = await axios.get(
+      "http://www.omdbapi.com/?t=" + movieTitle + "&plot=full&apikey=" + APIKey
+    );
+    console.log(movieTitle);
+    setMovie(response.data);
+    console.log(response.data);
+  };
 
   return (
     <div className="container login">
@@ -24,6 +42,7 @@ function MovieCall() {
           type={"text"}
           id={"inputTitle"}
           placeholder={"Title"}
+          value={title}
           required={""}
           autoComplete={"off"}
           onChange={handleChange}
