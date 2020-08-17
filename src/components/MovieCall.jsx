@@ -55,6 +55,14 @@ function MovieCall() {
           Search
         </button>
       </form>
+      <div>
+        {movie && (
+          <div>
+            <h1>{movie.Title}</h1>
+            <img src={movie.Poster} alt="Movie Poster" />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
