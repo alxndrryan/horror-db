@@ -4,6 +4,7 @@ import Header from "./components/Navbar";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Movie from "./pages/Movie";
+import Search from "./pages/Search";
 import NoMatch from "./pages/NoMatch";
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route exact path="/login" component={Login}>
             <Login />
+          </Route>
+          <Route>
+            <Search exact path="/search" />
           </Route>
           <Route>
             <NoMatch />

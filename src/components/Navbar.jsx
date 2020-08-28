@@ -83,7 +83,7 @@ function Navbar() {
             autoComplete={"off"}
             onChange={handleChange}
           />
-          <Link to="/login">
+          <Link to="/search">
             <button
               className="btn btn-outline-success my-2 my-sm-0 custom-btn"
               type="submit"
