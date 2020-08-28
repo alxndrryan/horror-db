@@ -15,7 +15,7 @@ function App() {
           <Route exact path={["/", "/horror"]}>
             <Movie />
           </Route>
-          <Route exact path="/login">
+          <Route exact path="/login" component={Login}>
             <Login />
           </Route>
           <Route>
