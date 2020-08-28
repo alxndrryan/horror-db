@@ -33,33 +33,45 @@ function MovieCall() {
   };
 
   return (
-    <div className="container login">
-      <form className="form-signin">
-        <h5>Find A Movie</h5>
-        <Input
-          name={"title"}
-          for={"inputTitle"}
-          type={"text"}
-          id={"inputTitle"}
-          placeholder={"Title"}
-          value={title}
-          required={""}
-          autoComplete={"off"}
-          onChange={handleChange}
-        />
-        <button
-          className="btn btn-lg btn-primary btn-block custom-btn"
-          type="submit"
-          onClick={handleClick}
-        >
-          Search
-        </button>
-      </form>
+    <div>
+      <div className="container login">
+        <form className="form-signin">
+          <h5>Find A Movie</h5>
+          <Input
+            name={"title"}
+            for={"inputTitle"}
+            type={"text"}
+            id={"inputTitle"}
+            placeholder={"Title"}
+            value={title}
+            required={""}
+            autoComplete={"off"}
+            onChange={handleChange}
+          />
+          <button
+            className="btn btn-lg btn-primary btn-block custom-btn"
+            type="submit"
+            onClick={handleClick}
+          >
+            Search
+          </button>
+        </form>
+      </div>
       <div>
         {movie && (
-          <div>
-            <h1>{movie.Title}</h1>
+          <div className="jumbotron">
+            <h2 className="display-4">
+              {movie.Title} ({movie.Year})
+            </h2>
+            <p>
+              {movie.Rated} | {movie.Runtime}
+            </p>
+            {/* <p>{movie["Ratings"][2]["Value"]}</p> */}
             <img src={movie.Poster} alt="Movie Poster" />
+            <p className="lead">{movie.Plot}</p>
+            <p>Director: {movie.Director}</p>
+            <p>Writer: {movie.Writer}</p>
+            <p>Stars: {movie.Actors}</p>
           </div>
         )}
       </div>
